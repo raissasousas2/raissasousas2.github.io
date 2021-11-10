@@ -106,42 +106,6 @@
             </div>
           </div>
         </div>
-        
-        <div class="col-md-4">
-          <div class="row">
-            <div class="col-md-12" style="display: none;">
-              <h4 id="linerids">
-                Liner ID's
-              </h4>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <form role="form">
-                <div class="form-group" style="display:none;">
-                  <label for="PLID">Production Liner ID (in)</label>
-                  <input type="number" min="0" class="form-control" id="PLID">
-                </div>
-                <div class="form-group" style="display:none;">
-                  <label for="ILID">Intermediate Liner ID (in)</label>
-                  <input type="number" min="0" class="form-control" id="ILID">
-                </div>
-                <div class="form-group" style="display:none;">
-                  <label for="SLID">Surface Liner ID (in)</label>
-                  <input type="number" min="0" class="form-control" id="SLID">
-                </div>
-                <div class="form-group" style="display:none;">
-                  <label for="CLID">Conductor Liner ID (in)</label>
-                  <input type="number" min="0" class="form-control" id="CLID">
-                </div>
-                <div class="form-group" style="display:none;">
-                  <label for="STLID">Structural Liner ID (in)</label>
-                  <input type="number" min="0" class="form-control" id="STLID">
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
         <div class="col-md-4">
           <div class="row">
             <div class="col-md-12" style="display: none;">
@@ -177,6 +141,41 @@
             </div>
           </div>
         </div>
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-12" style="display: none;">
+              <h4 id="linerids">
+                Liner ID's
+              </h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <form role="form">
+                <div class="form-group" style="display:none;">
+                  <label for="PLID">Production Liner ID (in)</label>
+                  <input type="number" min="0" class="form-control" id="PLID">
+                </div>
+                <div class="form-group" style="display:none;">
+                  <label for="ILID">Intermediate Liner ID (in)</label>
+                  <input type="number" min="0" class="form-control" id="ILID">
+                </div>
+                <div class="form-group" style="display:none;">
+                  <label for="SLID">Surface Liner ID (in)</label>
+                  <input type="number" min="0" class="form-control" id="SLID">
+                </div>
+                <div class="form-group" style="display:none;">
+                  <label for="CLID">Conductor Liner ID (in)</label>
+                  <input type="number" min="0" class="form-control" id="CLID">
+                </div>
+                <div class="form-group" style="display:none;">
+                  <label for="STLID">Structural Liner ID (in)</label>
+                  <input type="number" min="0" class="form-control" id="STLID">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="row">
         <div class="col-md-12">
@@ -189,6 +188,72 @@
 
             </div>
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12" style="display: none;">
+          <h3 id="results">
+            Results
+          </h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12" style="display: none;">
+          <table class="table" id="results-table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Open Hole Volume (bbl)</th>
+                <th scope="col">Cement Volume (bbl)</th>
+                <th scope="col">Mud Volume (bbl)</th>
+                <th scope="col">Casing Displacement (bbl/ft)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Production</th>
+                <td id="Production_OHV"></td>
+                <td id="Production_CV"></td>
+                <td id="Production_MV"></td>
+                <td id="Production_CD"></td>
+              </tr>
+              <tr id="intermediate">
+                <th scope="row">Intermediate</th>
+                <td id="Intermediate_OHV"></td>
+                <td id="Intermediate_CV"></td>
+                <td id="Intermediate_MV"></td>
+                <td id="Intermediate_CD"></td>
+              </tr>
+              <tr id="surface">
+                <th scope="row">Surface</th>
+                <td id="Surface_OHV"></td>
+                <td id="Surface_CV"></td>
+                <td id="Surface_MV"></td>
+                <td id="Surface_CD"></td>
+              </tr>
+              <tr id="conductor">
+                <th scope="row">Conductor</th>
+                <td id="Conductor_OHV"></td>
+                <td id="Conductor_CV"></td>
+                <td id="Conductor_MV"></td>
+                <td id="Conductor_CD"></td>
+              </tr>
+              <tr id="structural">
+                <th scope="row">Structural</th>
+                <td id="Structural_OHV"></td>
+                <td id="Structural_CV"></td>
+                <td id="Structural_MV"></td>
+                <td id="Structural_CD"></td>
+              </tr>
+              <tr>
+                <th scope="row">Total</th>
+                <td id="Total_OHV"></td>
+                <td id="Total_CV"></td>
+                <td id="Total_MV"></td>
+                <td id="Total_CD"></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
       <div class="row">
