@@ -924,3 +924,12 @@ $("#run").click(function() {
     $("#Structural_CD").text(CasingDisplacementStructural.toFixed(3));
     $("#Total_CD").text(CasingDisplacementTotal.toFixed(3));
 });
+
+$("#save").click(function() {
+    window.print();
+});
+
+$("#clear").click(function() {
+    if (confirm ("Are you sure?"))
+        window.location.reload();
+});
