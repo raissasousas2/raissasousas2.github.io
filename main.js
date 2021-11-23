@@ -1056,3 +1056,81 @@ $("#clear").click(function() {
     if (confirm ("Are you sure?"))
         window.location.reload();
 });
+
+// Aditivos
+// Tipos de lama
+var mud_types = {
+    'Oil-based': {
+        'Diesel': '10',
+        'Querosene': '20',
+        'N-parafinas': '30',
+        'Outro': ''
+    },
+    'Water-based': {
+        'Industrial': '50',
+        'Água do mar': '60',
+        'Salmoura': '70',
+        'Outro': ''
+    },
+    'Synthetic-based': {
+        'Outro': ''
+    }
+};
+
+$( "#mud_type" ).change(function() {
+    let mud_type = $('#mud_type').val();
+    let options = Object.keys(mud_types[mud_type]);
+    let select = $('#base');
+    add_options(select, options);
+});
+
+$( "#base" ).change(function() {
+    let base = $('#base').val();
+    let density = mud_types[$('#mud_type').val()][base];
+    $('#base_density').val(density);
+    $('#t_base').text(base);
+});
+
+var additives = {
+    'Aditivo1': '100',
+    'Aditivo2': '200',
+    'Aditivo3': '300',
+    'Aditivo4': '400',
+    'Aditivo5': '500',
+    'Aditivo6': '600',
+    'Aditivo7': '700',
+    'Aditivo8': '800',
+    'Aditivo9': '900',
+    'Aditivo10': '1000',
+    'Outro': ''
+}; 
+
+$("[id^=add_mud]").change(function() {
+    let element = '#' + this.id;
+    let elementNumber = this.id.slice(-1);
+    let nextElement = +elementNumber + 1;
+
+    let add_mud = $(element).val();
+    let density = additives[add_mud];
+    
+    $('#add_density'+elementNumber).val(density);
+
+    $("#add_mud"+nextElement).parent().fadeIn(500);
+    $("#add_density"+nextElement).parent().fadeIn(500);
+    $("#add_percentage"+nextElement).parent().fadeIn(500);
+    
+    if ($('#add_mud'+nextElement).val() == null){
+        let options = Object.keys(additives);
+        let select = $('#add_mud'+nextElement);
+        add_options(select, options);
+    }
+});
+
+
+$("#run_aditivos").click(function() {
+    
+    $("#aditivos-results").parent().fadeIn(500);
+    $("#aditivos-results-table").parent().fadeIn(500);
+    
+
+});
