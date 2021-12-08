@@ -1,4 +1,5 @@
 
+
 $( "#pop_PLOD" ).change(function() {
     $("#PLID").parent().fadeIn(500);
     $("#linerids").parent().fadeIn(500);
@@ -399,6 +400,9 @@ function add_options(select, values){
             .text(value));
     });
 }
+
+// declaração de variáveis volume de lama
+var MudVolumeProduction, MudVolumeIntermediate, MudVolumeSurface, MudVolumeConductor, MudVolumeStructural, MudVolumeTotal;
 
 $("#run").click(function() {
     
@@ -864,16 +868,16 @@ $("#run").click(function() {
 
 
     // Calcula o volume de lama
-    var MudVolumeProduction = (((ID_ProductionCasing**2)*L_ProductionCasing)/1029.4);
+    MudVolumeProduction = (((ID_ProductionCasing**2)*L_ProductionCasing)/1029.4);
 
-    var MudVolumeIntermediate = (((ID_IntermediateCasing**2)*L_IntermediateCasing)/1029.4);
+    MudVolumeIntermediate = (((ID_IntermediateCasing**2)*L_IntermediateCasing)/1029.4);
 
-    var MudVolumeSurface = (((ID_SurfaceCasing**2)*L_SurfaceCasing)/1029.4);
+    MudVolumeSurface = (((ID_SurfaceCasing**2)*L_SurfaceCasing)/1029.4);
 
-    var MudVolumeConductor = (((ID_ConductorCasing**2)*L_ConductorCasing)/1029.4);
+    MudVolumeConductor = (((ID_ConductorCasing**2)*L_ConductorCasing)/1029.4);
 
-    var MudVolumeStructural = (((ID_StructuralCasing**2)*L_StructuralCasing)/1029.4);
-    var MudVolumeTotal = (MudVolumeProduction + MudVolumeIntermediate + MudVolumeSurface + MudVolumeConductor);
+    MudVolumeStructural = (((ID_StructuralCasing**2)*L_StructuralCasing)/1029.4);
+    MudVolumeTotal = (MudVolumeProduction + MudVolumeIntermediate + MudVolumeSurface + MudVolumeConductor);
 
 
     // Calcula o Casing Displacement
@@ -893,6 +897,12 @@ $("#run").click(function() {
     !OpenHoleVolumeSurface ? $("#surface").hide() : $("#surface").show();
     !OpenHoleVolumeConductor ? $("#conductor").hide() : $("#conductor").show();
     !OpenHoleVolumeStructural ? $("#structural").hide() : $("#structural").show();
+
+    // oculta as opções zeradas de well section
+    !OpenHoleVolumeIntermediate ? $("#section").children('option[value="Intermediate"]').remove() : null;
+    !OpenHoleVolumeSurface ? $("#section").children('option[value="Surface"]').remove() : null;
+    !OpenHoleVolumeConductor ? $("#section").children('option[value="Conductor"]').remove() : null;
+    !OpenHoleVolumeStructural ? $("#section").children('option[value="Structural"]').remove() : null;
 
     // Preenche os campos de resultados
     //OpenHoleVolume
@@ -1126,6 +1136,18 @@ $("[id^=add_mud]").change(function() {
     }
 });
 
+$("#add_aditivos").click(function() {
+    if (!$("#df2").is(':visible'))
+        $("#df2").fadeIn(500);
+    else if (!$("#df3").is(':visible'))
+        $("#df3").fadeIn(500);
+    else if (!$("#df4").is(':visible'))
+        $("#df4").fadeIn(500);
+    else if (!$("#df5").is(':visible')) {
+        $("#df5").fadeIn(500);
+        $("#add_aditivos").hide();
+    }
+});
 
 $("#run_aditivos").click(function() {
     

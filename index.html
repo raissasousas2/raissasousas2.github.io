@@ -302,8 +302,49 @@
       <div class="row">
           <div class="col-md-12">
             <h3>
-              Drilling Fluid
+              Drilling Fluid #1
             </h3>
+          </div>
+      </div>
+        
+        <div class="row">
+          <div class="col-md-4">
+            <h4>
+              Well Section
+            </h4>
+          </div>
+          <div class="col-md-4">
+            <h4>
+              Mud Density (ppg)
+            </h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <form role="form">
+              <div class="form-group">
+                <select class="form-control" id="section">
+                  <option></option>
+                  <option value="Production">Production</option>
+                  <option value="Intermediate">Intermediate</option>
+                  <option value="Surface">Surface</option>
+                  <option value="Conductor">Conductor</option>
+                  <option value="Structural">Structural</option>
+                  <option value="Total">Total</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <form role="form">
+                  <div class="form-group">
+                    <input type="number" min="0" class="form-control" id="mud_density">
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
         <div class="row">
@@ -394,8 +435,8 @@
           <div class="col-md-12">
             <form role="form">
               <div class="form-group">
-                <label for="add_percentage0">Percentage (%)</label>
-                <input type="number" min="0" class="form-control" id="add_percentage0">
+                <label for="add_mass0">Mass (lb/bbl)</label>
+                <input type="number" min="0" class="form-control" id="add_mass0">
               </div>
             </form>
           </div>
@@ -431,7 +472,7 @@
       <div class="col-md-12">
         <form role="form">
           <div class="form-group" style="display:none;">
-            <input type="number" min="0" class="form-control" id="add_percentage1">
+            <input type="number" min="0" class="form-control" id="add_mass1">
           </div>
         </form>
       </div>
@@ -467,7 +508,7 @@
       <div class="col-md-12">
         <form role="form">
           <div class="form-group" style="display:none;">
-            <input type="number" min="0" class="form-control" id="add_percentage2">
+            <input type="number" min="0" class="form-control" id="add_mass2">
           </div>
         </form>
       </div>
@@ -503,7 +544,7 @@
       <div class="col-md-12">
         <form role="form">
           <div class="form-group" style="display:none;">
-            <input type="number" min="0" class="form-control" id="add_percentage3">
+            <input type="number" min="0" class="form-control" id="add_mass3">
           </div>
         </form>
       </div>
@@ -539,7 +580,7 @@
       <div class="col-md-12">
         <form role="form">
           <div class="form-group" style="display:none;">
-            <input type="number" min="0" class="form-control" id="add_percentage4">
+            <input type="number" min="0" class="form-control" id="add_mass4">
           </div>
         </form>
       </div>
@@ -575,7 +616,7 @@
       <div class="col-md-12">
         <form role="form">
           <div class="form-group" style="display:none;">
-            <input type="number" min="0" class="form-control" id="add_percentage5">
+            <input type="number" min="0" class="form-control" id="add_mass5">
           </div>
         </form>
       </div>
@@ -611,7 +652,7 @@
       <div class="col-md-12">
         <form role="form">
           <div class="form-group" style="display:none;">
-            <input type="number" min="0" class="form-control" id="add_percentage6">
+            <input type="number" min="0" class="form-control" id="add_mass6">
           </div>
         </form>
       </div>
@@ -647,7 +688,7 @@
       <div class="col-md-12">
         <form role="form">
           <div class="form-group" style="display:none;">
-            <input type="number" min="0" class="form-control" id="add_percentage7">
+            <input type="number" min="0" class="form-control" id="add_mass7">
           </div>
         </form>
       </div>
@@ -683,7 +724,7 @@
       <div class="col-md-12">
         <form role="form">
           <div class="form-group" style="display:none;">
-            <input type="number" min="0" class="form-control" id="add_percentage8">
+            <input type="number" min="0" class="form-control" id="add_mass8">
           </div>
         </form>
       </div>
@@ -719,7 +760,7 @@
       <div class="col-md-12">
         <form role="form">
           <div class="form-group" style="display:none;">
-            <input type="number" min="0" class="form-control" id="add_percentage9">
+            <input type="number" min="0" class="form-control" id="add_mass9">
           </div>
         </form>
       </div>
@@ -727,21 +768,1905 @@
   </div>
 </div>
 <br>
+
+
+<div id="df2" style="display:none;">
+      <div class="row">
+          <div class="col-md-12">
+            <h3>
+              Drilling Fluid #2
+            </h3>
+          </div>
+      </div>
+        
+        <div class="row">
+          <div class="col-md-4">
+            <h4>
+              Well Section
+            </h4>
+          </div>
+          <div class="col-md-4">
+            <h4>
+              Mud Density (ppg)
+            </h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <form role="form">
+              <div class="form-group">
+                <select class="form-control" id="section">
+                  <option></option>
+                  <option value="Production">Production</option>
+                  <option value="Intermediate">Intermediate</option>
+                  <option value="Surface">Surface</option>
+                  <option value="Conductor">Conductor</option>
+                  <option value="Structural">Structural</option>
+                  <option value="Total">Total</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <form role="form">
+                  <div class="form-group">
+                    <input type="number" min="0" class="form-control" id="mud_density">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="mud_type">Type</label>
+                    <select class="form-control" id="mud_type">
+                      <option></option>
+                      <option>Water-based</option>
+                      <option>Oil-based</option>]
+                      <option>Synthetic-based</option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="base">Base</label>
+                    <select class="form-control" id="base">
+                      <option></option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-12">
+              <form role="form">
+                <div class="form-group">
+                  <label for="base_density">Density (lbm/bbl)</label>
+                  <input type="number" min="0" class="form-control" id="base_density">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+  </div>
+  <div class="row">
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12">
+            <form role="form">
+              <div class="form-group">
+                <label for="add_mud0">Mud Additives</label>
+                <select class="form-control" id="add_mud0">
+                  <option></option>
+                  <option>Aditivo1</option>
+                  <option>Aditivo2</option>
+                  <option>Aditivo3</option>
+                  <option>Aditivo4</option>
+                  <option>Aditivo5</option>
+                  <option>Aditivo6</option>
+                  <option>Aditivo7</option>
+                  <option>Aditivo8</option>
+                  <option>Aditivo9</option>
+                  <option>Aditivo10</option>
+                  <option>Outro</option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12">
+            <form role="form">
+              <div class="form-group">
+                <label for="add_density0">Density (lbm/bbl)</label>
+                <input type="number" min="0" class="form-control" id="add_density0">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12">
+            <form role="form">
+              <div class="form-group">
+                <label for="add_mass0">Mass (lb/bbl)</label>
+                <input type="number" min="0" class="form-control" id="add_mass0">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  </div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud1">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density1">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass1">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud2">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density2">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass2">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud3">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density3">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass3">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud4">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density4">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass4">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud5">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density5">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass5">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud6">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density6">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass6">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud7">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density7">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass7">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud8">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density8">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass8">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud9">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density9">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass9">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+
+<div id="df3" style="display:none;">
+      <div class="row">
+          <div class="col-md-12">
+            <h3>
+              Drilling Fluid #3
+            </h3>
+          </div>
+      </div>
+        
+        <div class="row">
+          <div class="col-md-4">
+            <h4>
+              Well Section
+            </h4>
+          </div>
+          <div class="col-md-4">
+            <h4>
+              Mud Density (ppg)
+            </h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <form role="form">
+              <div class="form-group">
+                <select class="form-control" id="section">
+                  <option></option>
+                  <option value="Production">Production</option>
+                  <option value="Intermediate">Intermediate</option>
+                  <option value="Surface">Surface</option>
+                  <option value="Conductor">Conductor</option>
+                  <option value="Structural">Structural</option>
+                  <option value="Total">Total</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <form role="form">
+                  <div class="form-group">
+                    <input type="number" min="0" class="form-control" id="mud_density">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="mud_type">Type</label>
+                    <select class="form-control" id="mud_type">
+                      <option></option>
+                      <option>Water-based</option>
+                      <option>Oil-based</option>]
+                      <option>Synthetic-based</option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="base">Base</label>
+                    <select class="form-control" id="base">
+                      <option></option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-12">
+              <form role="form">
+                <div class="form-group">
+                  <label for="base_density">Density (lbm/bbl)</label>
+                  <input type="number" min="0" class="form-control" id="base_density">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+  </div>
+  <div class="row">
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12">
+            <form role="form">
+              <div class="form-group">
+                <label for="add_mud0">Mud Additives</label>
+                <select class="form-control" id="add_mud0">
+                  <option></option>
+                  <option>Aditivo1</option>
+                  <option>Aditivo2</option>
+                  <option>Aditivo3</option>
+                  <option>Aditivo4</option>
+                  <option>Aditivo5</option>
+                  <option>Aditivo6</option>
+                  <option>Aditivo7</option>
+                  <option>Aditivo8</option>
+                  <option>Aditivo9</option>
+                  <option>Aditivo10</option>
+                  <option>Outro</option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12">
+            <form role="form">
+              <div class="form-group">
+                <label for="add_density0">Density (lbm/bbl)</label>
+                <input type="number" min="0" class="form-control" id="add_density0">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12">
+            <form role="form">
+              <div class="form-group">
+                <label for="add_mass0">Mass (lb/bbl)</label>
+                <input type="number" min="0" class="form-control" id="add_mass0">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  </div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud1">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density1">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass1">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud2">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density2">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass2">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud3">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density3">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass3">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud4">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density4">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass4">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud5">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density5">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass5">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud6">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density6">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass6">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud7">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density7">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass7">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud8">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density8">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass8">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud9">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density9">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass9">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+
+<div id="df4" style="display:none;">
+      <div class="row">
+          <div class="col-md-12">
+            <h3>
+              Drilling Fluid #4
+            </h3>
+          </div>
+      </div>
+        
+        <div class="row">
+          <div class="col-md-4">
+            <h4>
+              Well Section
+            </h4>
+          </div>
+          <div class="col-md-4">
+            <h4>
+              Mud Density (ppg)
+            </h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <form role="form">
+              <div class="form-group">
+                <select class="form-control" id="section">
+                  <option></option>
+                  <option value="Production">Production</option>
+                  <option value="Intermediate">Intermediate</option>
+                  <option value="Surface">Surface</option>
+                  <option value="Conductor">Conductor</option>
+                  <option value="Structural">Structural</option>
+                  <option value="Total">Total</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <form role="form">
+                  <div class="form-group">
+                    <input type="number" min="0" class="form-control" id="mud_density">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="mud_type">Type</label>
+                    <select class="form-control" id="mud_type">
+                      <option></option>
+                      <option>Water-based</option>
+                      <option>Oil-based</option>]
+                      <option>Synthetic-based</option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="base">Base</label>
+                    <select class="form-control" id="base">
+                      <option></option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-12">
+              <form role="form">
+                <div class="form-group">
+                  <label for="base_density">Density (lbm/bbl)</label>
+                  <input type="number" min="0" class="form-control" id="base_density">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+  </div>
+  <div class="row">
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12">
+            <form role="form">
+              <div class="form-group">
+                <label for="add_mud0">Mud Additives</label>
+                <select class="form-control" id="add_mud0">
+                  <option></option>
+                  <option>Aditivo1</option>
+                  <option>Aditivo2</option>
+                  <option>Aditivo3</option>
+                  <option>Aditivo4</option>
+                  <option>Aditivo5</option>
+                  <option>Aditivo6</option>
+                  <option>Aditivo7</option>
+                  <option>Aditivo8</option>
+                  <option>Aditivo9</option>
+                  <option>Aditivo10</option>
+                  <option>Outro</option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12">
+            <form role="form">
+              <div class="form-group">
+                <label for="add_density0">Density (lbm/bbl)</label>
+                <input type="number" min="0" class="form-control" id="add_density0">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12">
+            <form role="form">
+              <div class="form-group">
+                <label for="add_mass0">Mass (lb/bbl)</label>
+                <input type="number" min="0" class="form-control" id="add_mass0">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  </div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud1">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density1">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass1">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud2">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density2">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass2">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud3">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density3">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass3">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud4">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density4">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass4">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud5">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density5">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass5">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud6">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density6">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass6">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud7">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density7">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass7">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud8">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density8">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass8">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud9">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density9">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass9">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<div id="df5" style="display:none;">
+      <div class="row">
+          <div class="col-md-12">
+            <h3>
+              Drilling Fluid #5
+            </h3>
+          </div>
+      </div>
+        
+        <div class="row">
+          <div class="col-md-4">
+            <h4>
+              Well Section
+            </h4>
+          </div>
+          <div class="col-md-4">
+            <h4>
+              Mud Density (ppg)
+            </h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <form role="form">
+              <div class="form-group">
+                <select class="form-control" id="section">
+                  <option></option>
+                  <option value="Production">Production</option>
+                  <option value="Intermediate">Intermediate</option>
+                  <option value="Surface">Surface</option>
+                  <option value="Conductor">Conductor</option>
+                  <option value="Structural">Structural</option>
+                  <option value="Total">Total</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <form role="form">
+                  <div class="form-group">
+                    <input type="number" min="0" class="form-control" id="mud_density">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="mud_type">Type</label>
+                    <select class="form-control" id="mud_type">
+                      <option></option>
+                      <option>Water-based</option>
+                      <option>Oil-based</option>]
+                      <option>Synthetic-based</option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="base">Base</label>
+                    <select class="form-control" id="base">
+                      <option></option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-12">
+              <form role="form">
+                <div class="form-group">
+                  <label for="base_density">Density (lbm/bbl)</label>
+                  <input type="number" min="0" class="form-control" id="base_density">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+  </div>
+  <div class="row">
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12">
+            <form role="form">
+              <div class="form-group">
+                <label for="add_mud0">Mud Additives</label>
+                <select class="form-control" id="add_mud0">
+                  <option></option>
+                  <option>Aditivo1</option>
+                  <option>Aditivo2</option>
+                  <option>Aditivo3</option>
+                  <option>Aditivo4</option>
+                  <option>Aditivo5</option>
+                  <option>Aditivo6</option>
+                  <option>Aditivo7</option>
+                  <option>Aditivo8</option>
+                  <option>Aditivo9</option>
+                  <option>Aditivo10</option>
+                  <option>Outro</option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12">
+            <form role="form">
+              <div class="form-group">
+                <label for="add_density0">Density (lbm/bbl)</label>
+                <input type="number" min="0" class="form-control" id="add_density0">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12">
+            <form role="form">
+              <div class="form-group">
+                <label for="add_mass0">Mass (lb/bbl)</label>
+                <input type="number" min="0" class="form-control" id="add_mass0">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  </div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud1">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density1">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass1">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud2">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density2">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass2">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud3">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density3">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass3">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud4">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density4">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass4">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud5">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density5">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass5">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud6">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density6">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass6">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud7">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density7">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass7">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud8">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density8">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass8">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <select class="form-control" id="add_mud9">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_density9">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group" style="display:none;">
+            <input type="number" min="0" class="form-control" id="add_mass9">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<br>
       <div class="row">
         <div class="col-md-12">
           <div class="row">
             <div class="col-md-4 mx-auto">
                
+              <button type="button" id="add_aditivos" class="btn btn-success mr-2">
+                +
+              </button>
+
               <button type="button" id="run_aditivos" class="btn btn-success mr-2">
                 Run
-              </button>
-
-              <button type="button" id="save" class="btn btn-success mr-2">
-                Print
-              </button>
-
-              <button type="button" id="clear" class="btn btn-success mr-2">
-                Clear
               </button>
             </div>
           </div>
