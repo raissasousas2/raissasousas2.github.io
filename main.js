@@ -1116,6 +1116,19 @@ $("[id^=base]").change(function () {
     let base_n = this.id.slice(-1);
     let density = mud_types[$('#mud_type' + base_n).val()][base];
     $('#density_base' + base_n).val(density);
+
+    // Mostra campo digitável para outro
+    if (base == 'Other') {
+        $('#mud_type' + base_n).parent().parent().parent().parent().parent().attr('class', 'col-md-3');
+        $('#base' + base_n).parent().parent().parent().parent().parent().attr('class', 'col-md-3');
+        $('#density_base' + base_n).parent().parent().parent().parent().parent().attr('class', 'col-md-3');
+        $("#other_base" + base_n).parent().parent().parent().parent().parent().fadeIn(1);
+    } else {
+        $('#mud_type' + base_n).parent().parent().parent().parent().parent().attr('class', 'col-md-4');
+        $('#base' + base_n).parent().parent().parent().parent().parent().attr('class', 'col-md-4');
+        $('#density_base' + base_n).parent().parent().parent().parent().parent().attr('class', 'col-md-4');
+        $("#other_base" + base_n).parent().parent().parent().parent().parent().fadeOut(1);
+    }
 });
 
 // Lista de aditivos e densidades
@@ -1220,6 +1233,9 @@ $("#run_aditivos").click(function () {
             $("." + section).show();
             // identifica a base selecionada
             let base = $("#base" + i).val();
+            if (base == 'Other') {
+                base = $("#other_base" + i).val();
+            }
             // identifica a densidade da base selecionada
             let density_base = $("#density_base" + i).val();
             // busca o valor do mud volume para a seção definida
