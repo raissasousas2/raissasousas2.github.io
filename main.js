@@ -1147,6 +1147,19 @@ $("[id^=add_mud]").change(function () {
     $("#add_density" + nextElement).parent().fadeIn(500);
     $("#add_mass" + nextElement).parent().fadeIn(500);
 
+    // Mostra campo digitável para outro
+    if (add_mud == 'Other') {
+        $('#add_density' + elementNumber + dfNumber).parent().parent().parent().parent().parent().attr('class', 'col-md-3');
+        $('#add_mass' + elementNumber + dfNumber).parent().parent().parent().parent().parent().attr('class', 'col-md-3');
+        $(element).parent().parent().parent().parent().parent().attr('class', 'col-md-3');
+        $("#add_other" + elementNumber + dfNumber).parent().parent().parent().parent().parent().fadeIn(1);
+    } else {
+        $('#add_density' + elementNumber + dfNumber).parent().parent().parent().parent().parent().attr('class', 'col-md-4');
+        $('#add_mass' + elementNumber + dfNumber).parent().parent().parent().parent().parent().attr('class', 'col-md-4');
+        $(element).parent().parent().parent().parent().parent().attr('class', 'col-md-4');
+        $("#add_other" + elementNumber + dfNumber).parent().parent().parent().parent().parent().fadeOut(1);
+    }
+
     // Adiciona nova linha de aditivo
     if ($('#add_mud' + nextElement).val() == null) {
         let options = Object.keys(additives);
@@ -1222,6 +1235,9 @@ $("#run_aditivos").click(function () {
             for (let j = 0; j <= 9; j++) {
                 // identifica qual aditivo foi selecionado
                 let additive = $("#add_mud" + j + "_" + i).val();
+                if (additive == 'Other') {
+                    additive = $("#add_other" + j + "_" + i).val();
+                }
                 // identifica a densidade do aditivo selecionado
                 let add_density = $("#add_density" + j + "_" + i).val();
                 // identifica a massa do aditivo selecionado
