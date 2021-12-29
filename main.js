@@ -1084,13 +1084,16 @@ $("#clear").click(function () {
 // Tipos de lama e bases
 var mud_types = {
     'Water-based': {
-        'Industrial': '350.507',
+        'Fresh Water': '350.507',
         'Salt Water': '357.5171',
         'Other': ''
     },
     'Oil-based': {
         'Diesel': '287.416',
         'Mineral Oil': '',
+        'Other': ''
+    },
+    'Synthetic-based': {
         'Synthetic Fluid': '',
         'Other': ''
     },
