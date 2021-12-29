@@ -1,9 +1,6 @@
 
 // Diagrama de brocas
-// Fade In entre os campos = Liner OD chama Liner ID
 $("#pop_PLOD").change(function () {
-    $("#PLID").parent().fadeIn(500);
-    $("#linerids").parent().fadeIn(500);
     let select = $('#pop_PBOD');
     switch ($('#pop_PLOD').val()) {
         case '4':
@@ -41,12 +38,8 @@ $("#pop_PLOD").change(function () {
             break;
     }
 });
-//  Fade In entre os campos = Bit OD chama length
+
 $("#pop_PBOD").change(function () {
-    $("#PL").parent().fadeIn(500);
-    $("#length").parent().fadeIn(500);
-    $("#pop_ILOD").parent().fadeIn(500);
-    $("#pop_IBOD").parent().fadeIn(500);
     let select = $('#pop_ILOD');
     switch ($('#pop_PBOD').val()) {
         case '4 3/4':
@@ -85,8 +78,14 @@ $("#pop_PBOD").change(function () {
     }
 });
 
-$("#pop_ILOD").change(function () {
+$("#PLID").change(function () {
+    $("#pop_ILOD").parent().fadeIn(500);
+    $("#pop_IBOD").parent().fadeIn(500);
     $("#ILID").parent().fadeIn(500);
+    $("#IL").parent().fadeIn(500);
+}); 
+
+$("#pop_ILOD").change(function () {
     let select = $('#pop_IBOD');
     switch ($('#pop_ILOD').val()) {
         case '5 1/2':
@@ -132,9 +131,6 @@ $("#pop_ILOD").change(function () {
 });
 
 $("#pop_IBOD").change(function () {
-    $("#IL").parent().fadeIn(500);
-    $("#pop_SLOD").parent().fadeIn(500);
-    $("#pop_SBOD").parent().fadeIn(500);
     let select = $('#pop_SLOD');
     switch ($('#pop_IBOD').val()) {
         case '6 1/2':
@@ -173,8 +169,14 @@ $("#pop_IBOD").change(function () {
     }
 });
 
-$("#pop_SLOD").change(function () {
+$("#ILID").change(function () {
+    $("#pop_SLOD").parent().fadeIn(500);
+    $("#pop_SBOD").parent().fadeIn(500);
     $("#SLID").parent().fadeIn(500);
+    $("#SuL").parent().fadeIn(500);
+}); 
+
+$("#pop_SLOD").change(function () {
     let select = $('#pop_SBOD');
     switch ($('#pop_SLOD').val()) {
         case '7 5/8':
@@ -220,9 +222,6 @@ $("#pop_SLOD").change(function () {
 });
 
 $("#pop_SBOD").change(function () {
-    $("#SuL").parent().fadeIn(500);
-    $("#pop_CLOD").parent().fadeIn(500);
-    $("#pop_CBOD").parent().fadeIn(500);
     let select = $('#pop_CLOD');
     switch ($('#pop_SBOD').val()) {
         case '8 1/2':
@@ -264,8 +263,14 @@ $("#pop_SBOD").change(function () {
     }
 });
 
-$("#pop_CLOD").change(function () {
+$("#SLID").change(function () {
+    $("#pop_CLOD").parent().fadeIn(500);
+    $("#pop_CBOD").parent().fadeIn(500);
     $("#CLID").parent().fadeIn(500);
+    $("#CL").parent().fadeIn(500);
+}); 
+
+$("#pop_CLOD").change(function () {
     let select = $('#pop_CBOD');
     switch ($('#pop_CLOD').val()) {
         case '9 5/8':
@@ -308,9 +313,6 @@ $("#pop_CLOD").change(function () {
 });
 
 $("#pop_CBOD").change(function () {
-    $("#CL").parent().fadeIn(500);
-    $("#pop_STLOD").parent().fadeIn(500);
-    $("#pop_STBOD").parent().fadeIn(500);
     let select = $('#pop_STLOD');
     switch ($('#pop_CBOD').val()) {
         case '10 5/8':
@@ -349,8 +351,14 @@ $("#pop_CBOD").change(function () {
     }
 });
 
-$("#pop_STLOD").change(function () {
+$("#CLID").change(function () {
+    $("#pop_STLOD").parent().fadeIn(500);
+    $("#pop_STBOD").parent().fadeIn(500);
     $("#STLID").parent().fadeIn(500);
+    $("#StL").parent().fadeIn(500);
+}); 
+
+$("#pop_STLOD").change(function () {
     let select = $('#pop_STBOD');
     switch ($('#pop_STLOD').val()) {
         case '11 3/4':
@@ -387,10 +395,6 @@ $("#pop_STLOD").change(function () {
             add_options(select, ['42']);
             break;
     }
-});
-
-$("#pop_STBOD").change(function () {
-    $("#StL").parent().fadeIn(500);
 });
 
 // Adiciona opções no select de forma dinâmica
@@ -1209,6 +1213,20 @@ $("[id^=section]").change(function () {
 
 // Ação de cálculo dos aditivos
 $("#run_aditivos").click(function () {
+
+    // Verifica se campos foram preenchidos
+    if (($("#section1").val() &&
+        $("#mud_density1").val() &&
+        $("#mud_volume1").val() &&
+        $("#mud_type1").val() &&
+        $("#base1").val() &&
+        $("#density_base1").val() &&
+        $("#add_mud0_1").val() &&
+        $("#add_density0_1").val() &&
+        $("#add_mass0_1").val()) == '') {
+        alert("Please fill all fields for Drilling Fluid #1");
+        return;
+    }
 
     // Mostra a tabela de resultados
     $("#aditivos-results").fadeIn(500);
