@@ -412,17 +412,18 @@ var MudVolumeProduction, MudVolumeIntermediate, MudVolumeSurface, MudVolumeCondu
 
 $("#run").click(function () {
 
-    $("#results").parent().fadeIn(500);
-    $("#results-table").parent().fadeIn(500);
-
     //Seta variável OD e alerta erro se production não estiver preenchido
     var OD_ProductionCasing = $("#pop_PLOD").val();
-    if (!OD_ProductionCasing)
+    if (!OD_ProductionCasing) {
         alert('Please choose a Production Casing OD.');
+        return;
+    }
 
     var HoleSizePC = $("#pop_PBOD").val();
-    if (!HoleSizePC)
+    if (!HoleSizePC) {
         alert('Please choose a Production Bit OD.');
+        return;
+    }
 
     // Inicia as variáveis com valor zero caso não tenham sido preenchidas
 
@@ -828,20 +829,27 @@ $("#run").click(function () {
             break;
     }
 
+    // Seta variável ID e alerta erro se production não estiver preenchido
+    var ID_ProductionCasing = Number($("#PLID").val());
+    if (!ID_ProductionCasing) {
+        alert('Please choose an Production ID.');
+        return;
+    }
+
     // Seta variável Length e alerta erro se production não estiver preenchido
     var L_ProductionCasing = Number($("#PL").val());
-    if (!L_ProductionCasing)
+    if (!L_ProductionCasing){
         alert('Please choose a Production Length.');
+        return;
+    }
 
     var L_IntermediateCasing = Number($("#IL").val());
     var L_SurfaceCasing = Number($("#SuL").val());
     var L_ConductorCasing = Number($("#CL").val());
     var L_StructuralCasing = Number($("#StL").val());
 
-    // Seta variável ID e alerta erro se production não estiver preenchido
-    var ID_ProductionCasing = Number($("#PLID").val());
-    if (!ID_ProductionCasing)
-        alert('Please choose an Production ID.');
+    $("#results").parent().fadeIn(500);
+    $("#results-table").parent().fadeIn(500);
 
     var ID_IntermediateCasing = Number($("#ILID").val());
     var ID_SurfaceCasing = Number($("#SLID").val());
@@ -1145,7 +1153,7 @@ var additives = {
     'Caustic Soda (NaOH)': '746.5799',
     'Lime (CaO)': '1170.693',
     'Salt (NaCl)': '757.0951',
-    'Soap (TBD)': '',
+    'Soap': '',
     'Soda Ash (Na₂CO₃)': '890.2877',
     'Xanthan Gum (C₃₅H₄₉O₂₉)': '525.76',
     'Other': ''
